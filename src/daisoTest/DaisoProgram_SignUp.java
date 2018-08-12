@@ -44,7 +44,7 @@ public class DaisoProgram_SignUp extends JFrame{
 		textIDField = new JTextField();
 		textIDField.setBounds(109, 17, 116, 24);
 		getContentPane().add(textIDField);
-		textIDField.setColumns(10);
+//		textIDField.setColumns(10);
 		
 		textNameField = new JTextField();
 		textNameField.setColumns(10);

@@ -5,13 +5,11 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class DaisoProgram_Login extends JFrame{
 	private JTextField textField;
 	private JPasswordField passwordField;
-	private DaisoProgram_SignUp SignUp;
+	
 	public DaisoProgram_Login() {
 		setTitle("\uB85C\uADF8\uC778");
 		setBounds(100, 100, 274, 220);	

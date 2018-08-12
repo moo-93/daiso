@@ -27,7 +27,7 @@ import javax.swing.Box;
 public class DaisoProgram extends JFrame {
 	private JPanel contentPane;
 	private JTextField Search;
-	private JButton button;
+	private JButton btnSearch;
 	private ImageIcon ImageDaiso;
 	private ImageIcon ImageDaiso2;
 
@@ -72,11 +72,10 @@ public class DaisoProgram extends JFrame {
 		Search = new JTextField();
 		Search.setBounds(503, 12, 135, 21);
 		contentPane.add(Search);
-		Search.setColumns(10);
 		
-		button = new JButton("\uC81C\uD488\uC870\uD68C");
-		button.setBounds(671, 12, 97, 23);
-		contentPane.add(button);
+		btnSearch = new JButton("\uC81C\uD488\uC870\uD68C");
+		btnSearch.setBounds(671, 12, 97, 23);
+		contentPane.add(btnSearch);
 		
 		JComboBox BigcomboBox = new JComboBox();
 		BigcomboBox.setBounds(74, 13, 143, 21);
