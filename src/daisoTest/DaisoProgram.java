@@ -24,7 +24,7 @@ import javax.swing.SwingConstants;
 import java.awt.Component;
 import javax.swing.Box;
 
-public class daisoProgram extends JFrame {
+public class DaisoProgram extends JFrame {
 	private JPanel contentPane;
 	private JTextField Search;
 	private JButton button;
@@ -38,7 +38,7 @@ public class daisoProgram extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					daisoProgram frame = new daisoProgram();
+					DaisoProgram frame = new DaisoProgram();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -50,7 +50,7 @@ public class daisoProgram extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public daisoProgram() {
+	public DaisoProgram() {
 		setTitle("\uB2E4\uC774\uC18C \uBB34\uC778\uAE30");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 432);
@@ -60,18 +60,12 @@ public class daisoProgram extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnLogin = new JButton("login");
-		btnLogin.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		btnLogin.addActionListener(new ButtonLoginWindow());
 		btnLogin.setBounds(671, 68, 97, 23);
 		contentPane.add(btnLogin);
 		
 		JButton btnBuy = new JButton("\uAD6C\uB9E4");
-		btnBuy.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		btnBuy.addActionListener(new ButtonBuyWindow());
 		btnBuy.setBounds(671, 136, 97, 23);
 		contentPane.add(btnBuy);
 		
@@ -93,6 +87,7 @@ public class daisoProgram extends JFrame {
 		contentPane.add(MidcomboBox);
 		
 		JTextArea textArea = new JTextArea();
+		textArea.setEditable(false);
 		textArea.setBounds(24, 70, 342, 253);
 		contentPane.add(textArea);
 		

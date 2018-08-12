@@ -12,6 +12,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JSpinner;
 import javax.swing.JTextPane;
 import javax.swing.JFormattedTextField;
+import java.awt.Color;
 
 public class DaisoProgram_Buy extends JFrame {
 	private JTextField textField_Search;
@@ -23,6 +24,7 @@ public class DaisoProgram_Buy extends JFrame {
 	 */
 	public DaisoProgram_Buy() {
 		setTitle("\uAD6C\uB9E4\uCC3D");
+		setBounds(100,100,827,400);
 		getContentPane().setLayout(null);
 		
 		JLabel label = new JLabel("\uB300\uBD84\uB958");
@@ -79,15 +81,17 @@ public class DaisoProgram_Buy extends JFrame {
 		btnAddButton.setBounds(330, 120, 47, 23);
 		getContentPane().add(btnAddButton);
 		
-		JButton btncanButton = new JButton("\u25C0");
-		btncanButton.setBounds(330, 230, 47, 23);
-		getContentPane().add(btncanButton);
+		JButton btnDelButton = new JButton("\u25C0");
+		btnDelButton.setBounds(330, 230, 47, 23);
+		getContentPane().add(btnDelButton);
 		
 		JSpinner spinner_can = new JSpinner();
 		spinner_can.setBounds(334, 197, 31, 24);
 		getContentPane().add(spinner_can);
 		
 		JFormattedTextField formattedTextField_Total = new JFormattedTextField();
+		formattedTextField_Total.setBackground(Color.WHITE);
+		formattedTextField_Total.setEditable(false);
 		formattedTextField_Total.setText("\uCD1D\uC561 :");
 		formattedTextField_Total.setBounds(24, 310, 289, 24);
 		getContentPane().add(formattedTextField_Total);
