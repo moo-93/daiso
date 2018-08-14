@@ -6,13 +6,14 @@ import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JTable;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.SwingConstants;
+
+import java.util.Iterator;
+import java.util.Vector;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.JSpinner;
-import javax.swing.JTextPane;
 import javax.swing.JFormattedTextField;
 import java.awt.Color;
+import javax.swing.ListSelectionModel;
 
 public class DaisoProgram_Buy extends JFrame {
 	private JTextField textField_Search;
@@ -53,10 +54,20 @@ public class DaisoProgram_Buy extends JFrame {
 		getContentPane().add(textField_Search);
 		
 		JButton btnSearButton = new JButton("\uC81C\uD488\uC870\uD68C");
+//		btnSearButton.addActionListener(l);
 		btnSearButton.setBounds(687, 11, 97, 23);
 		getContentPane().add(btnSearButton);
 		
-		ListTable = new JTable();
+		ProductBuyDAO dao = new ProductBuyDAO();
+		Vector<TestDTO> arr= new Vector<>();
+		Vector<String> columName = new Vector<>();
+		arr= dao.Selectsql();
+		columName = dao.ColHedaer();
+		DefaultTableModel table = new DefaultTableModel(arr,columName);
+		
+		
+		ListTable = new JTable(table);
+		ListTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		ListTable.setBounds(14, 58, 312, 240);
 		getContentPane().add(ListTable);
 		
@@ -78,6 +89,7 @@ public class DaisoProgram_Buy extends JFrame {
 		getContentPane().add(spinner_add);
 		
 		JButton btnAddButton = new JButton("\u25B6");
+		btnAddButton.addActionListener(new ButtonProductAdd());
 		btnAddButton.setBounds(330, 120, 47, 23);
 		getContentPane().add(btnAddButton);
 		
