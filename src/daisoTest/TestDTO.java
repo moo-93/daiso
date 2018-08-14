@@ -1,21 +1,18 @@
-package daisoTest;
+/*package daisoTest;
 
 public class TestDTO {
 
 	private String item_name;
 	private int price;
 	private int balance;
-	private String ColName;
-	private String Colpri;
-	private String ColBal;
 
-	/*	   public TestDTO(String item_name, int price, int balance) {
+		   public TestDTO(String item_name, int price, int balance) {
 	      this.item_name = item_name;
 	      this.price = price;
 	      this.balance = balance;
 	   }
 
-	 */	   public int getBalance() {
+	 	   public int getBalance() {
 		 return balance;
 	 }
 	 public String getItem_name() {
@@ -33,22 +30,5 @@ public class TestDTO {
 	 public void setBalance(int balance) {
 		 this.balance = balance;
 	 }
-	 public void setColName(String name) {
-		 this.ColName=name;
-	 }
-	 public void setColPri(String price) {
-		 this.Colpri=price;
-	 }
-	 public void setColBal(String bal) {
-		 this.ColBal=bal;
-	 }
-	 public String getColName() {
-		 return ColName;
-	 }
-	 public String getColpri() {
-		 return Colpri;
-	 }
-	 public String getColBal() {
-		 return ColBal;
-	 }
 }
+*/

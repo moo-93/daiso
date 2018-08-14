@@ -10,10 +10,8 @@
 //		ProductBuyDAO dao = new ProductBuyDAO();
 //		Vector<TestDTO> arr = new Vector<>();
 //		Vector<String> colum = new Vector<>();
-//		arr = dao.Selectsql();
-//		colum = dao.ColHedaer();
-//		DefaultTableModel table = new DefaultTableModel(colum,0);
-//		table.addRow(arr);
+//		
+//		
 //		
 //		/*System.out.println("이름"+"가격"+"재고");
 //		for(TestDTO i : arr)

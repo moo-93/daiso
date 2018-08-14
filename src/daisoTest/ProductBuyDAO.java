@@ -24,12 +24,12 @@ public class ProductBuyDAO {
 		}
 		return con;
 	}
-	public Vector<TestDTO> Selectsql() {
+	public Vector<String> Selectsql() {
 		PreparedStatement prst=null;
 		Connection con=null;
 		ResultSet rst=null;
 		
-		Vector<TestDTO> arr = new Vector<>();
+		Vector data = new Vector();
 		try {
 			con=Consql();
 			StringBuilder sql = new StringBuilder();
@@ -42,18 +42,18 @@ public class ProductBuyDAO {
 			
 			while(rst.next())
 			{
-				TestDTO dto = new TestDTO();
-				dto.setItem_name(rst.getString("item_name"));
-				dto.setPrice(rst.getInt("price"));
-				dto.setBalance(rst.getInt("balance"));
-				arr.addElement(dto);
+				Vector<String> arr = new Vector<>();
+				arr.addElement(rst.getString("item_name"));
+				arr.addElement(rst.getString("price"));
+				arr.addElement(rst.getString("balance"));
+				data.addElement(arr);
 			}
 		} catch (SQLException e) {
 			System.out.println(e);
 		}finally {
 			if(prst!=null)try {prst.close();}catch(SQLException e) {}
 		}
-		return arr;
+		return data;
 	}
 	public Vector<String> ColHedaer(){
 		Vector<String> arr_col = new Vector<>();

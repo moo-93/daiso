@@ -59,13 +59,12 @@ public class DaisoProgram_Buy extends JFrame {
 		getContentPane().add(btnSearButton);
 		
 		ProductBuyDAO dao = new ProductBuyDAO();
-		Vector<TestDTO> arr= new Vector<>();
+		Vector<String> arr= new Vector<>();
 		Vector<String> columName = new Vector<>();
 		arr= dao.Selectsql();
 		columName = dao.ColHedaer();
-		DefaultTableModel table = new DefaultTableModel(arr,columName);
 		
-		ListTable = new JTable(table);
+		ListTable = new JTable(arr,columName);
 		ListTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		ListTable.setBounds(14, 58, 312, 240);
 		getContentPane().add(ListTable);
