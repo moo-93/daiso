@@ -65,7 +65,6 @@ public class DaisoProgram_Buy extends JFrame {
 		columName = dao.ColHedaer();
 		DefaultTableModel table = new DefaultTableModel(arr,columName);
 		
-		
 		ListTable = new JTable(table);
 		ListTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		ListTable.setBounds(14, 58, 312, 240);
